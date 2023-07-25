@@ -1,0 +1,41 @@
+@import "../fonts.scss";
+
+.header {
+	margin-top: 20px;
+
+  // header__nav
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  } // header__nav
+
+  // header__logo
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    & span {
+      color: #4793ff;
+      font-size: 25px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  } // header__logo
+
+  // header__search
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    & input {
+      padding: 9px 20px;
+      border-radius: 10px;
+      background: rgba(71, 147, 255, 0.2);
+			border: none;
+			outline: none;
+			text-align: center;
+    }
+  } // header__search
+}

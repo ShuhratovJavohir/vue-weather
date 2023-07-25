@@ -1,0 +1,24 @@
+@import './all.scss';
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat';
+	user-select: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+.container{
+	max-width: 1230px;
+	width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+}
