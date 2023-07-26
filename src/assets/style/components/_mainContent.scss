@@ -1,0 +1,117 @@
+@import "../fonts.scss";
+
+.main__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-left {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    padding: 22px;
+    border-radius: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+
+    &-temp {
+      color: #4793ff;
+      font-size: 96px;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    &-today {
+      color: #000;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &-description {
+      font-size: 16px;
+      color: #939cb0;
+      margin-bottom: 15px;
+    }
+
+    &-time,
+    &-city {
+      color: #939cb0;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 15px;
+    }
+
+    &-img {
+      position: absolute;
+      top: 46px;
+      right: 20px;
+      width: 120px;
+      height: 120px;
+
+      & img {
+        width: 100%;
+      }
+    }
+  }
+
+  &-right {
+    position: relative;
+    max-width: 750px;
+    width: 100%;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    padding: 40px 30px;
+
+    &-items {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    &-bg {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &-img {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      fill: #fff;
+      box-shadow: 1px 4px 10px rgba(71, 147, 255, 0.2);
+    }
+
+    &-name {
+      color: #939cb0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      width: 100px;
+    }
+
+    &-info {
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

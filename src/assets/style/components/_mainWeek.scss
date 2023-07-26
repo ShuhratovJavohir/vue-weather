@@ -1,0 +1,95 @@
+@import "../fonts.scss";
+
+.main__week {
+  margin-top: 50px;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      border-radius: 5px;
+      background: #4793ff;
+      box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+      padding: 7px 20px 9px 20px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &-title2 {
+      border-radius: 5px;
+      background: #fff;
+      box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+      padding: 7px 20px 9px 20px;
+      color: #000;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &-cards {
+    display: flex;
+    margin-top: 7px;
+    border-radius: 0px 0px 20px 20px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    justify-content: space-between;
+  }
+
+  &-card {
+    max-width: 150px;
+    width: 100%;
+    border-radius: 10px;
+    background: rgba(71, 147, 255, 0.2);
+    padding: 11px;
+
+    &-dayname {
+      color: #000;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    &-day {
+      color: #939cb0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 7px;
+    }
+
+    &-img {
+      margin-top: 12px;
+      width: 48px;
+      height: 48px;
+    }
+
+    &-temp {
+      margin-top: 13px;
+      color: #000;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    &-reltemp {
+      color: #939cb0;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &-type {
+			margin-top: 6px;
+      color: #939cb0;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

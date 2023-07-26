@@ -6,7 +6,11 @@ export default createStore({
     apiKey: "0dc4c42edd3bfedbf2cc94a830639e98",
     weather: null,
   },
-  mutations: {},
+  mutations: {
+    getWeatherInfo(state, payload){
+      state.weather = payload
+    }
+  },
   actions: {
     async getWaether(context, city) {
       try {
@@ -18,13 +22,13 @@ export default createStore({
         console.log(local_names.ru);
 
         //Проверка! Если название города которое мы получили в CITY равно с тем что мы получили в response
-        if (local_names.ru == city) {
+        if (local_names.ru.toLowerCase() == city.toLowerCase()) {
           let response2 = await axios.get(
-            `https://api.openweathermap.org/data/2.8/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${context.state.apiKey}`
+            `https://api.openweathermap.org/data/2.8/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${context.state.apiKey}&units=metric&lang=ru`
           );
-          console.log(response2);
-        } else{
-          console.error('error');
+          let weatherInfo = {...response2.data, name: city}
+          // Делаем commit чтобы сделать мутацию так как токлько мутация может изменять states
+          context.commit('getWeatherInfo', weatherInfo)
         }
       } catch (error) {
         console.error("ошибка с данными 404");

@@ -1,17 +1,17 @@
 <template>
   <main class="main">
-    <!-- <MainToDay />
-    <MainWeek /> -->
-  </main>
+		<MainContent />
+		<MainWeek />
+	</main>
 </template>
 
 <script>
-import MainToDay from "@/components/MainToDay.vue";
-import MainWeek from "@/components/MainWeek.vue";
+import MainContent from "@/components/MainContent.vue";
+import MainWeek from "@/components/MainWeek.vue"
 export default {
-	components: [
-		MainToDay,
+	components: {
+		MainContent,
 		MainWeek
-	]
+	}
 };
 </script>
