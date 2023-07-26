@@ -24,7 +24,7 @@ export default {
     ...mapActions(["getWaether"]),
   },
   created() {
-    setTimeout(() => this.getWaether("Ташкент"), 500);
+    this.getWaether("Ташкент")
   },
 };
 </script>

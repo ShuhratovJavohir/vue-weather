@@ -35,7 +35,8 @@
           </div>
           <h2 class="main__content-right-name">Давление</h2>
           <p class="main__content-right-info">
-            {{ weather.current.pressure }} мм ртутного столба - {{ weather.current.pressure > 0 && weather.current.pressure < 700 ? 'низко' : weather.current.pressure > 700 &&  weather.current.pressure <  900 ? 'Нормально' : 'Высокий'   }}
+            {{ weather.current.pressure }} мм ртутного столба - 
+            {{ weather.current.pressure > 0 && weather.current.pressure < 700 ? 'низко' : weather.current.pressure > 700 &&  weather.current.pressure <  900 ? 'Нормально' : 'Высокий'   }}
           </p>
         </div>
 
@@ -44,7 +45,7 @@
             <img src="@/assets/images/precipitation.svg" alt="" />
           </div>
           <h2 class="main__content-right-name">Осадки</h2>
-          <p class="main__content-right-info">{{ weather.current.weather[0].main == 'Clear' ? 'Без осадков' : weather.current.weather[0].main == 'Rain' ? 'Дождь' : 'Облочно'}}</p>
+          <p class="main__content-right-info">{{ weather.current.clouds == 0 ? 'без осадков' : weather.current.clouds + '%' }}</p>
         </div>
 
         <div class="main__content-right-item">
@@ -52,7 +53,10 @@
             <img src="@/assets/images/wind.svg" alt="" />
           </div>
           <h2 class="main__content-right-name">Ветер</h2>
-          <p class="main__content-right-info">3 м/с юго-запад - легкий ветер</p>
+          <p class="main__content-right-info">
+            {{ weather.current.wind_speed }} 
+            м/с юго-запад - 
+            {{ weather.current.wind_speed > 2 && weather.current.wind_speed < 10 ? 'легкий ветер' : 'Сильный ветер'}}</p>
         </div>
       </div>
     </div>
