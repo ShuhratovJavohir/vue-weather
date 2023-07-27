@@ -4,18 +4,20 @@
     <Main />
   </div>
   <div class="loading" v-else>
-    <h1>Идет загрузка...</h1>
+    <Loading/>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
 import Main from "@/components/Main.vue";
+import Loading from '@/components/Loading.vue'
 import { mapActions, mapState } from "vuex";
 export default {
   components: {
     Header,
     Main,
+    Loading
   },
   computed: {
     ...mapState(["weather"]),
@@ -24,7 +26,7 @@ export default {
     ...mapActions(["getWaether"]),
   },
   created() {
-    this.getWaether("Ташкент")
+    setTimeout(() => this.getWaether("Ташкент"), 500)
   },
 };
 </script>

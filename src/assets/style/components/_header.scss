@@ -36,6 +36,11 @@
 			border: none;
 			outline: none;
 			text-align: center;
+      color: #fff;
+      
+      &::placeholder{
+        color: #fff;
+      }
     }
   } // header__search
 }

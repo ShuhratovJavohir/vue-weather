@@ -11,10 +11,10 @@
     width: 100%;
     padding: 22px;
     border-radius: 20px;
-    background: #fff;
+    background: #111;
     display: flex;
     flex-direction: column;
-    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    box-shadow: 2px 5px 25px -3px rgba(255, 255, 255, 0.6);
 
     &-temp {
       color: #4793ff;
@@ -24,7 +24,7 @@
     }
 
     &-today {
-      color: #000;
+      color: #fff;
       font-size: 40px;
       font-weight: 400;
       line-height: normal;
@@ -63,8 +63,8 @@
     max-width: 750px;
     width: 100%;
     border-radius: 20px;
-    background: #fff;
-    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    background: #111;
+    box-shadow: 2px 5px 25px -3px rgba(255, 255, 255, 0.6);
     padding: 40px 30px;
 
     &-items {
@@ -96,11 +96,11 @@
       align-items: center;
       border-radius: 50%;
       fill: #fff;
-      box-shadow: 1px 4px 10px rgba(71, 147, 255, 0.2);
+      box-shadow: 2px 5px 25px -3px rgba(255, 255, 255, 0.6);
     }
 
     &-name {
-      color: #939cb0;
+      color: #a7a7a7;
       font-size: 14px;
       font-weight: 400;
       line-height: normal;
@@ -108,7 +108,7 @@
     }
 
     &-info {
-      color: #000;
+      color: #fff;
       font-size: 14px;
       font-weight: 400;
       line-height: normal;

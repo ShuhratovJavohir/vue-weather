@@ -9,7 +9,6 @@
         :key="i"
         :day="day"
         :index="i"
-        :weather="weather"
       />
     </div>
   </div>

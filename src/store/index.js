@@ -15,7 +15,7 @@ export default createStore({
     async getWaether(context, city) {
       try {
         let response = await axios.get(
-          `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${context.state.apiKey}`
+          `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${context.state.apiKey}`
         );
         // Деструктуризация! Берём из response.data lat / lon / local_names
         let { lat, lon, local_names } = response.data[0];

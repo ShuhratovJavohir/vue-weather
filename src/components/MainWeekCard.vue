@@ -1,7 +1,7 @@
 <template>
   <div class="main__week-card">
     <h2 class="main__week-card-dayname">
-      {{ index == 0 ? 'Сегодня' : index == 1 ? 'Завтра' : getWeekDayё }}
+      {{ index == 0 ? 'Сегодня' : index == 1 ? 'Завтра' : getWeekDay }}
     </h2>
     <p class="main__week-card-day">{{ getDay }} {{ getMonth }}</p>
     <img :src="getImg" alt="" class="main__week-card-img" />
@@ -18,7 +18,6 @@ export default {
   props: {
     day: { typeof: Object },
     index: { typeof: Number },
-    weather: { typeof: Array },
   },
   computed: {
     description() {
@@ -36,10 +35,6 @@ export default {
     getWeekDay() {
       return unix(this.day.dt, "weekday");
     },
-  },
-  mounted() {
-    console.log(this.index);
-    console.log(this.weather.daily);
   },
 };
 </script>
